@@ -1,0 +1,91 @@
+
+
+<view calss="bigcon">
+<view class='container'>
+  <view class="overview">
+    <text class='overviewwords' >l 订单概要</text>
+    <view class="block"></view>
+    <view class="black-line"></view>
+    <view class="block"></view>
+    <text  class="title" >{{orders.title}}</text>
+  </view>
+
+
+  <view class="details">
+    <view class="detailmess">
+    <view >
+       <text class="choosetimewords">生效时间 ：</text>
+          <text class="inputview">{{orders.begin_time}}</text>
+    </view>
+    <view>
+        <text class="choosetimewords">截止时间 ：</text>
+          <text class="inputview">{{orders.end_time}}</text>
+    </view>
+       <view class="messagestyles" >
+          <text class="choosetimewords">类型 : </text>
+          <view class="inputview">{{type}}</view>
+      </view>
+      <view class="messagestyles" >
+          <text class="choosetimewords">发起人 : </text>
+          <view class="inputview">{{orders.sender.name}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="addwords">
+    <text class='overviewwords'>l 详细要求</text>
+    <view class="block"></view>
+    <view class="black-line"></view>
+    <textarea class="textareastyle" bindinput='getcontent'>{{orders.content}}</textarea>
+  </view> 
+</view>
+
+<view class="pinkline"></view>
+
+<view class="container">
+  <view class="senderdetail">
+    <text class='overviewwords'>l 发起人信息</text>
+    <view class="block"></view>
+    <view class="black-line"></view>
+    <view class="containertwo">
+    <view class="header">
+      <image src="../images/Header.png" class="headerpicture"></image>
+    </view>
+    <view class="information">
+      <text class='smalloverviewwords'>{{orders.sender.name}}</text>
+      <view class="black-line"></view>
+      <view class="containthree">
+        <view  class="wechatview">
+          <image src="../images/wechat.png" class="weixinpicture"></image>
+          <text class='picturenumber'>{{orders.sender.phone}}</text>
+        </view>
+        <view class="QQview">
+          <image src="../images/Phone.png" class="weixinpicture"></image>
+          <text class='picturenumber'>{{orders.sender.phone}}</text>
+        </view>
+      </view>
+      <view class="containthree">
+          <button type='warn' plain class="Reportbutton" bindtap="phonecallevent">联系TA</button>
+      </view>
+    </view>
+    </view>
+    
+    
+  </view> 
+</view>
+
+
+<view class="pinkline"></view>
+
+
+<view class="container">
+  <view class="remuneration">
+    <text class='overviewwords'>l 酬金</text>
+    <view class="block"></view>
+    <view class="black-line"></view>
+    <view class="inputRemuneration">
+      <text class="Remuneration" bindinput='getprice'>￥{{orders.price}}</text>
+    </view>
+  <view class='blocks'></view>
+  </view>
+</view>
+</view>

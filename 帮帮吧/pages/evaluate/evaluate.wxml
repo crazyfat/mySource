@@ -1,0 +1,42 @@
+<!--pages/evaluate/evaluate.wxml-->
+<view class="container">
+    <view class="headview">
+        <text class="title">{{orders.title}}</text>
+        <text class="money">¥{{orders.price}}</text>
+    </view>
+    <view class="redline"></view>
+    <view class="content">
+        <view class="rightwords">
+            <textarea disabled class="miancontent" decode="{{true}}">{{block}}
+            {{orders.content}}
+            </textarea>
+            <view class="time">
+                <view class="startview">
+                    <text class="starttime">开始时间：{{orders.begin_time}}</text>
+                </view>
+                <view class="endview">
+                    <text class="endtime">截止时间：{{orders.end_time}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="redline"></view>
+    <view class="mainwordsview">
+        <text class="mainwords">评分:</text>
+     </view>
+    <view class="right">
+      <view bindtap="starTap" data-index="{{index}}"  class="star" wx:for="{{userStars}}" wx:key="index">
+        <image src="{{item}}"></image>
+      </view>
+    </view>
+    <view class="redline"></view>
+    <view class="mainwordsview">
+        <text class="mainwords">评价:</text>
+     </view>
+    <textarea class="evaluate"  placeholder='说说您的评价吧'></textarea>
+</view>
+<view class="submit">
+    <button class="submitbut" type="warn" plain bindtap="putevalu" >发布评价</button>
+</view>
+
+

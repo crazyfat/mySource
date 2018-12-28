@@ -1,0 +1,101 @@
+    <!--导航条-->  
+    <view class="navbar">  
+      <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" wx:key="unique" disable='{{itemDisable}}' bindtap="navbarTap">{{item}}</text>  
+    </view>  
+      
+    <!--接单-->  
+    <view class="container" hidden="{{currentTab!==0}}">
+    <!--接单1-->
+    <view class="onecontent" wx:for="{{reorders}}"  wx:for-index="idx">
+  <view class="upper">
+    <view class="RecePic">
+      <image class="ReceivePic" src='{{reorders[idx].sender_avatar}}' id='{{reorders[idx].id}}' bindtap="TurnsenderInfo" ></image>
+    </view>
+    <view class="Picright" >  
+      <view class="headview">
+        <text class="title">{{reorders[idx].title}}</text>
+        <text class="money">{{status[idx]}}</text>
+      </view>
+      <view class="startview">
+        <text class="starttime">发布时间：{{reorders[idx].updated_at}}</text>
+      </view>
+        <view class="redline"></view>
+    </view>
+    
+  </view>
+
+    <view class="content">
+       
+        <view class="rightwords" id='{{reorders[idx].id}}' bindtap="MoreDetailB" >
+            <textarea disabled="disabled" class="miancontent" decode="{{true}}">{{block}}
+            {{reorders[idx].content}}
+            </textarea>
+            <text class="reward">￥\t\t{{reorders[idx].price}}</text>
+        </view>
+    </view>
+    <view class="redline"></view>
+<view>
+    <view class="butVie">
+        <button class="Get" type="primary" plain='true' id='{{reorders[idx].id}}' bindtap="MoreDetailB" >详情</button>
+    </view>
+</view>
+    <view class="greyblock"></view>
+    </view>
+    </view>
+     
+      
+    <!--发单-->  
+    <view class="container" hidden="{{currentTab!==1}}">  
+          <!--发单1-->
+    
+    <view class="onecontent" wx:for="{{sentorders}}"  wx:for-index="idx">  
+  <view class="upper">
+    <view class="RecePic">
+      <image class="ReceivePic" src='{{myAvatar}}' ></image>
+    </view>
+    <view class="Picright" >  
+      <view class="headview">
+        <text class="title">{{sentorders[idx].title}}</text>
+        <text class="money">{{status[idx]}}</text>
+      </view>
+      <view class="startview">
+        <text class="starttime">发布时间：{{sentorders[idx].updated_at}}</text>
+      </view>
+        <view class="redline"></view>
+    </view>
+    
+  </view>
+
+    <view class="content">
+       
+        <view class="rightwords" id='{{sentorders[idx].id}}' bindtap="MoreDetail" >
+            <textarea disabled="disabled" class="miancontent" decode="{{true}}">{{block}}
+            {{sentorders[idx].content}}
+            </textarea>
+            <text class="reward">￥\t\t{{sentorders[idx].price}}</text>
+        </view>
+    </view>
+    <view class="redline"></view>
+<view>
+    <view class="butVie">
+        <button class="Get" type="primary" plain='true' id='{{sentorders[idx].id}}' bindtap="MoreDetail" >详情</button>
+    </view>
+</view>
+    <view class="greyblock"></view>
+    </view>
+    </view>
+    <view class='underview' hidden='{{hide}}' >
+    <view class="longLine"></view>
+    <view class='under'>
+    <text class="None">没有更多信息了</text>
+    </view> 
+    </view> 
+    
+    <view hidden='{{hideNull}}'>
+      <view class="empty" >
+        <image class="NullPic" src='../images/Null.png'></image>
+       </view>
+     <view class="textVie">
+      <text class="Null">暂无订单哦...</text>
+      </view>
+    </view>   

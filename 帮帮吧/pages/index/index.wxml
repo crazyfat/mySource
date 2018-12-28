@@ -1,0 +1,50 @@
+<view class="head">
+<view class="headview">
+<image  class="headpic" src='{{inFo.avatar}}'></image>
+<view class="nameview">
+<text class="name">{{inFo.name}}</text>
+<view class="Phoneview">
+<image  class="smallPhone" src='../images/smallPhone.png'></image>
+<view class="Numberview">
+<text class="phoneNumber">{{inFo.phone}}</text>
+</view>
+</view>
+</view>
+</view>
+
+</view>
+<view class="Bodytitle">
+<image  class="infoPic" src='../images/info.png'></image>
+<text class="information">个人信息</text>
+</view>
+<view class='body'>
+<view class='info'>
+<image  class="detailPic" src='../images/sex.png'></image>
+<text class="infom">学校</text>
+<view class="block-B"></view>
+<text class="getsInform">{{inFo.school}}</text>
+</view>
+<view class="greenline"></view>
+<view class='info'>
+<image  class="detailPic" src='../images/age.png'></image>
+<text class="infom">学院</text>
+<view class="block-B"></view>
+<text class="getsInform">{{inFo.unit}}</text>
+</view>
+<view class="greenline"></view>
+<view class='info'>
+<image  class="detailPic" src='../images/province.png'></image>
+<text class="infom">学号</text>
+<view class="block-B"></view>
+<text class="getsInform">{{inFo.uid}}</text>
+</view>
+<view class="greenline"></view>
+<view class='info'>
+<image  class="detailPic" src='../images/City.png'></image>
+<text class="infom">性别</text>
+<view class="block-B"></view>
+<text class="getsInform">{{Sex}}</text>
+</view>
+</view>
+<view class="greenline"></view>
+

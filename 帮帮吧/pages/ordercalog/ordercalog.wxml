@@ -1,0 +1,366 @@
+    <!--导航条-->  
+    <scroll-view class="segments" scroll-x="true">
+    <view class="navbar">  
+      <text wx:for="{{navbar}}" data-idx="{{index}}" class="item {{currentTab==index ? 'active' : ''}}" disable="{{itemDisable}}"  bindtap="navbarTap" >{{item}}</text>  
+    </view>  
+    </scroll-view>
+      
+    <!--全部-->
+
+    <view  hidden="{{currentTab!==0}}">
+         <view class="onecontent" wx:for="{{orders}}"  wx:for-index="idx">
+  <view class="upper">
+    <view class="RecePic">
+      <image class="ReceivePic" src='{{orders[idx].sender_avatar}}' id='{{orders[idx].id}}' bindtap="TurnsenderInfo" ></image>
+    </view>
+    <view class="Picright" >  
+      <view class="headview">
+        <text class="title">{{orders[idx].title}}</text>
+        <text class="money">{{orders[idx].distance}}</text>
+      </view>
+      <view class="startview">
+        <text class="starttime">发布时间：{{orders[idx].created_at}}</text>
+      </view>
+        <view class="redline"></view>
+    </view>
+    
+  </view>
+
+    <view class="content">
+       
+        <view class="rightwords" >
+            <textarea disabled="disabled" class="miancontent" decode="{{true}}">{{block}}
+            {{orders[idx].content}}
+            </textarea>
+            <text class="reward">￥\t\t{{orders[idx].price}}</text>
+        </view>
+    </view>
+    <view class="redline"></view>
+<view>
+    <view class="butVie">
+        <button class="Get" type="primary" plain='true' id='{{orders[idx].id}}' bindtap="reorder" >详情</button>
+    </view>
+</view>
+    <view class="greyblock"></view>
+    </view>  
+    
+    <view class='greyline'></view> 
+            <view hidden='{{hideNull}}'>
+    <view class="empty" >
+      <image class="NullPic" src='../images/Null.png'></image>
+    </view>
+    <view class="textVie">
+      <text class="Null">暂无订单哦...</text>
+    </view>
+    </view>   
+    <view class="under" hidden='{{hide}}'>
+      <text class="None">没有更多了</text>
+    </view>
+    </view>  
+      
+    <!--跑腿-->  
+       <view  hidden="{{currentTab!==1}}">
+         <view class="onecontent" wx:for="{{orders1}}"  wx:for-index="idx">
+  <view class="upper">
+    <view class="RecePic">
+      <image class="ReceivePic" src='{{orders1[idx].sender_avatar}}' id='{{orders1[idx].id}}' bindtap="TurnsenderInfo" ></image>
+    </view>
+    <view class="Picright" >  
+      <view class="headview">
+        <text class="title">{{orders1[idx].title}}</text>
+        <text class="money">{{orders1[idx].distance}}</text>
+      </view>
+      <view class="startview">
+        <text class="starttime">发布时间：{{orders1[idx].created_at}}</text>
+      </view>
+        <view class="redline"></view>
+    </view>
+    
+  </view>
+
+    <view class="content">
+       
+        <view class="rightwords" >
+            <textarea disabled="disabled" class="miancontent" decode="{{true}}">{{block}}
+            {{orders1[idx].content}}
+            </textarea>
+            <text class="reward">￥\t\t{{orders1[idx].price}}</text>
+        </view>
+    </view>
+    <view class="redline"></view>
+<view>
+    <view class="butVie">
+        <button class="Get" type="primary" plain='true' id='{{orders1[idx].id}}' bindtap="reorder"  >详情</button>
+    </view>
+</view>
+    <view class="greyblock"></view>
+    </view>  
+    
+    <view class='greyline'></view> 
+            <view hidden='{{hideNull}}'>
+    <view class="empty" >
+      <image class="NullPic" src='../images/Null.png'></image>
+    </view>
+    <view class="textVie">
+      <text class="Null">暂无订单哦...</text>
+    </view>
+    </view>   
+    <view class="under" hidden='{{hide}}'>
+      <text class="None">没有更多了</text>
+    </view>
+    </view>  
+    <!--悬赏-->  
+        <view  hidden="{{currentTab!=2}}">
+         <view class="onecontent" wx:for="{{orders2}}"  wx:for-index="idx">
+  <view class="upper">
+    <view class="RecePic">
+      <image class="ReceivePic" src='{{orders2[idx].sender_avatar}}' id='{{orders2[idx].id}}' bindtap="TurnsenderInfo" ></image>
+    </view>
+    <view class="Picright" >  
+      <view class="headview">
+        <text class="title">{{orders2[idx].title}}</text>
+        <text class="money">{{orders2[idx].distance}}</text>
+      </view>
+      <view class="startview">
+        <text class="starttime">发布时间：{{orders2[idx].created_at}}</text>
+      </view>
+        <view class="redline"></view>
+    </view>
+    
+  </view>
+
+    <view class="content">
+       
+        <view class="rightwords">
+            <textarea disabled="disabled" class="miancontent" decode="{{true}}">{{block}}
+            {{orders2[idx].content}}
+            </textarea>
+            <text class="reward">￥\t\t{{orders2[idx].price}}</text>
+        </view>
+    </view>
+    <view class="redline"></view>
+<view>
+    <view class="butVie">
+        <button class="Get" type="primary" plain='true' id='{{orders2[idx].id}}' bindtap="reorder"  >详情</button>
+    </view>
+</view>
+    <view class="greyblock"></view>
+    </view>  
+    
+    <view class='greyline'></view> 
+            <view hidden='{{hideNull}}'>
+    <view class="empty" >
+      <image class="NullPic" src='../images/Null.png'></image>
+    </view>
+    <view class="textVie">
+      <text class="Null">暂无订单哦...</text>
+    </view>
+    </view>   
+    <view class="under" hidden='{{hide}}'>
+      <text class="None">没有更多了</text>
+    </view>
+    </view>
+     <!--学习-->  
+        <view  hidden="{{currentTab!==3}}">
+         <view class="onecontent" wx:for="{{orders3}}"  wx:for-index="idx">
+  <view class="upper">
+    <view class="RecePic">
+      <image class="ReceivePic" src='{{orders3[idx].sender_avatar}}' id='{{orders3[idx].id}}' bindtap="TurnsenderInfo" ></image>
+    </view>
+    <view class="Picright" >  
+      <view class="headview">
+        <text class="title">{{orders3[idx].title}}</text>
+        <text class="money">{{orders3[idx].distance}}</text>
+      </view>
+      <view class="startview">
+        <text class="starttime">发布时间：{{orders3[idx].created_at}}</text>
+      </view>
+        <view class="redline"></view>
+    </view>
+    
+  </view>
+
+    <view class="content">
+       
+        <view class="rightwords">
+            <textarea disabled="disabled" class="miancontent" decode="{{true}}">{{block}}
+            {{orders3[idx].content}}
+            </textarea>
+            <text class="reward">￥\t\t{{orders3[idx].price}}</text>
+        </view>
+    </view>
+    <view class="redline"></view>
+<view>
+    <view class="butVie">
+        <button class="Get" type="primary" plain='true' id='{{orders3[idx].id}}' bindtap="reorder"  >详情</button>
+    </view>
+</view>
+    <view class="greyblock"></view>
+    </view>  
+    
+    <view class='greyline'></view> 
+            <view hidden='{{hideNull}}'>
+    <view class="empty" >
+      <image class="NullPic" src='../images/Null.png'></image>
+    </view>
+    <view class="textVie">
+      <text class="Null">暂无订单哦...</text>
+    </view>
+    </view>   
+    <view class="under" hidden='{{hide}}'>
+      <text class="None">没有更多了</text>
+    </view>
+    </view>
+     <!--技术-->  
+        <view  hidden="{{currentTab!==4}}">
+         <view class="onecontent" wx:for="{{orders4}}"  wx:for-index="idx">
+  <view class="upper">
+    <view class="RecePic">
+      <image class="ReceivePic" src='{{orders4[idx].sender_avatar}}' id='{{orders4[idx].id}}' bindtap="TurnsenderInfo" ></image>
+    </view>
+    <view class="Picright" >  
+      <view class="headview">
+        <text class="title">{{orders4[idx].title}}</text>
+        <text class="money">{{orders4[idx].distance}}</text>
+      </view>
+      <view class="startview">
+        <text class="starttime">发布时间：{{orders4[idx].created_at}}</text>
+      </view>
+        <view class="redline"></view>
+    </view>
+    
+  </view>
+
+    <view class="content">
+       
+        <view class="rightwords">
+            <textarea disabled="disabled" class="miancontent" decode="{{true}}">{{block}}
+            {{orders4[idx].content}}
+            </textarea>
+            <text class="reward">￥\t\t{{orders4[idx].price}}</text>
+        </view>
+    </view>
+    <view class="redline"></view>
+<view>
+    <view class="butVie">
+        <button class="Get" type="primary" plain='true' id='{{orders4[idx].id}}' bindtap="reorder" >详情</button>
+    </view>
+</view>
+    <view class="greyblock"></view>
+    </view>  
+    
+    <view class='greyline'></view> 
+            <view hidden='{{hideNull}}'>
+    <view class="empty" >
+      <image class="NullPic" src='../images/Null.png'></image>
+    </view>
+    <view class="textVie">
+      <text class="Null">暂无订单哦...</text>
+    </view>
+    </view>   
+    <view class="under" hidden='{{hide}}'>
+      <text class="None">没有更多了</text>
+    </view>
+    </view>
+     <!--生活-->  
+        <view  hidden="{{currentTab!==5}}">
+         <view class="onecontent" wx:for="{{orders5}}"  wx:for-index="idx">
+  <view class="upper">
+    <view class="RecePic">
+      <image class="ReceivePic" src='{{orders5[idx].sender_avatar}}' id='{{orders5[idx].id}}' bindtap="TurnsenderInfo" ></image>
+    </view>
+    <view class="Picright" >  
+      <view class="headview">
+        <text class="title">{{orders5[idx].title}}</text>
+        <text class="money">{{orders5[idx].distance}}</text>
+      </view>
+      <view class="startview">
+        <text class="starttime">发布时间：{{orders5[idx].created_at}}</text>
+      </view>
+        <view class="redline"></view>
+    </view>
+    
+  </view>
+
+    <view class="content">
+       
+        <view class="rightwords" >
+            <textarea disabled="disabled" class="miancontent" decode="{{true}}">{{block}}
+            {{orders5[idx].content}}
+            </textarea>
+            <text class="reward">￥\t\t{{orders5[idx].price}}</text>
+        </view>
+    </view>
+    <view class="redline"></view>
+<view>
+    <view class="butVie">
+        <button class="Get" type="primary" plain='true' id='{{orders5[idx].id}}' bindtap="reorder"  >详情</button>
+    </view>
+</view>
+    <view class="greyblock"></view>
+      
+    </view>
+    <view class='greyline'></view> 
+            <view hidden='{{hideNull}}'>
+    <view class="empty" >
+      <image class="NullPic" src='../images/Null.png'></image>
+    </view>
+    <view class="textVie">
+      <text class="Null">暂无订单哦...</text>
+    </view>
+    </view>   
+    <view class="under" hidden='{{hide}}'>
+      <text class="None">没有更多了</text>
+    </view>
+    </view>
+     <!--其他-->  
+            <view  hidden="{{currentTab!==6}}">
+         <view class="onecontent" wx:for="{{orders6}}"  wx:for-index="idx">
+  <view class="upper">
+    <view class="RecePic">
+      <image class="ReceivePic" src='{{orders6[idx].sender_avatar}}' id='{{orders6[idx].id}}' bindtap="TurnsenderInfo" ></image>
+    </view>
+    <view class="Picright" >  
+      <view class="headview">
+        <text class="title">{{orders6[idx].title}}</text>
+        <text class="money">{{orders6[idx].distance}}</text>
+      </view>
+      <view class="startview">
+        <text class="starttime">发布时间：{{orders6[idx].created_at}}</text>
+      </view>
+        <view class="redline"></view>
+    </view>
+    
+  </view>
+
+    <view class="content">
+       
+        <view class="rightwords" >
+            <textarea disabled="disabled" class="miancontent" decode="{{true}}">{{block}}
+            {{orders6[idx].content}}
+            </textarea>
+            <text class="reward">￥\t\t{{orders6[idx].price}}</text>
+        </view>
+    </view>
+    <view class="redline"></view>
+<view>
+    <view class="butVie">
+        <button class="Get" type="primary" plain='true' id='{{orders6[idx].id}}' bindtap="reorder"  >详情</button>
+    </view>
+</view>
+    <view class="greyblock"></view>
+      
+    </view>
+    <view class='greyline'></view> 
+            <view hidden='{{hideNull}}'>
+    <view class="empty" >
+      <image class="NullPic" src='../images/Null.png'></image>
+    </view>
+    <view class="textVie">
+      <text class="Null">暂无订单哦...</text>
+    </view>
+    </view>   
+    <view class="under" hidden='{{hide}}'>
+      <text class="None">没有更多了</text>
+    </view>
+    </view>

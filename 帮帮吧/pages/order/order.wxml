@@ -1,0 +1,100 @@
+<view class='container' >
+  <view class="overview" >
+    <text class='overviewwords'bindinput='getcontent' >l 订单概要</text>
+    <view class="block"></view>
+     <view class="black-line"></view>
+     <view class="block"></view>
+    <input  class="title" value='{{title}}'  placeholder="订单标题" bindinput='gettitle' />
+   
+  </view>
+    <view class="addwords">
+    <text class='overviewwords'>l 详细要求</text>
+    <view class="block"></view>
+    <view class="black-line"></view>
+    <view class='textareaview'>
+    <textarea disabled='{{disableText}}' value='{{content}}' class="textareastyle" placeholder='添加文字：' bindinput='getcontent'/>
+    </view>
+  </view>
+  <view class="details">
+      <text class='overviewwords'bindinput='getcontent' >l 具体日期</text>
+    <view class="block"></view>
+     <view class="black-line"></view>
+     <view class="block"></view>
+    <view class="Time1">
+      <image class="Icon" src='../images/Data1.png'></image>
+      <text class="timeText">生效日期</text>
+      <picker mode="date" value="{{begindata}}" start="2018-01-01" end="2018-12-31" bindchange="choosestartdata">
+          <text class="inputview" value='{{begindata}}'>{{begindata}}</text>
+        </picker>
+
+    </view>
+    <view class="SlightLine"></view>
+    <view class="Time1">
+      <image class="Icon" src='../images/Time1.png'></image>
+      <text class="timeText">生效时间</text>
+      <picker mode="time" value="{{begintime}}" start="09:01" end="21:01" bindchange="choosestarttime">
+          <text value='{{begintime}}' class="inputview">{{begintime}}</text>
+        </picker>
+
+    </view>
+    <view class="SlightLine"></view>
+    <view class="Time1">
+      <image class="Icon" src='../images/endTime.png'></image>
+      <text class="timeText">截止日期</text>
+      <picker mode="date" value="{{enddata}}" start="{{begindata}}" end="2018-12-31" bindchange="chooseenddata">
+          <text value='{{enddata}}' class="inputview">{{enddata}}</text>
+        </picker>
+
+    </view>
+    <view class="SlightLine"></view>
+    <view class="Time1">
+      <image class="Icon" src='../images/end.png'></image>
+      <text class="timeText">截止时间</text>
+              <picker mode="time" value="{{endtime}}" start="09：011" end="21：01" bindchange="chooseendtime">
+          <text value='{{endtime}}' class="inputview">{{endtime}}</text>
+        </picker>
+
+    </view>
+    <view class="bloderLine"></view>
+    <view class="Time1">
+      <image class="Icon" src='../images/Type.png'></image>
+      <text class="timeText">类型</text>
+       <picker value="{{index}}" range="{{style}}" bindchange="changestyle">
+         <text value='{{tip}}{{style[type]}}' class="inputviews"   > {{tip}}{{style[type]}}</text>
+      </picker>
+
+    </view>
+     <view class="block"></view>
+     <view class="block"></view>
+     <view class="block"></view>
+     <view class="block"></view>
+    
+  </view>
+
+
+  
+</view>
+<view class="pinkline"></view>
+<view class="container">
+  <view class="remuneration">
+    <text class='overviewwords'>l 酬金</text>
+    <view class="block"></view>
+    <view class="black-line"></view>
+    <view class="inputRemuneration">
+      <input value="{{price}}" class="Remuneration"placeholder="填写酬金" type='digit' bindinput='getprice'/>
+    </view>
+  <view class="bothbutton">
+    
+    <button type='warn' class-="Releasebutton" bindtap='showModal'>发布订单</button>
+  </view>
+<modal 
+    title="订单确认"
+     hidden="{{hiddenModal}}"
+     confirm-text="确定"
+     cancel-text="取消"
+     bindconfirm="Release"
+     bindcancel="listenerCancel" >
+     确认提交订单吗？
+     </modal>
+  </view>
+</view>

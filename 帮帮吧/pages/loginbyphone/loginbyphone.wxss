@@ -1,0 +1,48 @@
+@import '../../style/xiaomi.wxss';
+/* component/DoubleInputText/DoubleInputText.wxss */
+.login-img{
+  width: 300rpx;
+  height: 260rpx;
+}
+.inputview{
+  display: flex;
+ border-radius:40rpx;
+ background-color: rgb(248, 248, 248); 
+ height: 70rpx;
+ border-style: solid;
+ border-width:3rpx;
+ border-color: #DC143C;
+ width: 500rpx;
+ padding-top: 15rpx;
+}
+.Icin{
+ margin-left: 18rpx; 
+ width: 50rpx; 
+ height: 50rpx;
+}
+.getcode{
+  font-size: 34rpx;
+}
+.inputText { 
+ text-align: left; 
+ width: 80%;
+ font-size: 36rpx ;
+ color: rgb(80, 80, 80);
+ margin-left: 20rpx;
+} 
+.inputCode{ 
+ text-align: left; 
+ width: 50%;
+ font-size: 36rpx ;
+ color: rgb(80, 80, 80);
+ margin-left: 20rpx;
+} 
+.block{
+  height: 30rpx;
+}
+.putview{
+  display: flex;
+  justify-content: center;
+}
+
+

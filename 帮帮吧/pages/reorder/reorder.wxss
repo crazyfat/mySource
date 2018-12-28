@@ -1,0 +1,148 @@
+/* pages/mySenOrders/mySenOrders.wxss */
+@import '../../style/xiaomi.wxss';
+page{
+  background-color: #F5F5F5;
+  padding: 20rpx;
+  box-sizing:border-box;
+}
+.container{
+  background: white;
+  width: 100%;
+  height: 100%;
+  padding-top: 60rpx;
+  padding-bottom: 30rpx;
+}
+.HeadVie{
+  width: 100%;
+  height: 100%;
+}
+.PicVie{
+  display: flex;
+  justify-content: center
+}
+.statusVie{
+  display: flex;
+  justify-content: center;
+  margin-top: 20rpx;
+}
+.status{
+  font-size: 34rpx;
+  font-weight: bolder;
+}
+.HeadPic{
+  border-radius: 150rpx;
+  width: 150rpx;
+  height: 150rpx;
+}
+.bindStatusVie{
+  display: flex;
+  justify-content: center;
+  margin-top: 30rpx;
+}
+.bindStatus{
+  font-family: 'MI LANTING';
+  font-size:30rpx;
+  padding: 0rpx;
+  width: 30%;
+}
+.HeigherGreyVie{
+  width: 100%;
+  height: 10rpx;
+  background-color: #F5F5F5;
+}
+.InfoViewBlock_1{
+  background-color: white;
+  height: 100%;
+  width: 100%;
+}
+.titleView{
+  display: flex;
+}
+.titlePic{
+  height: 80rpx;
+  width: 80rpx;
+}
+.titlePicView{
+  width: 12%;
+  padding: 10rpx;
+  padding-bottom: 0rpx;
+  padding-right: 0rpx;
+}
+.titleTextView{
+  width: 80%;
+  padding-top: 20rpx;
+}
+.titleText{
+  font-family:'MI LANTING';
+  font-size: 32rpx; 
+}
+.slenderGrey{
+  width: 90%;
+  margin-left: 5%;
+  height: 4rpx;
+  background-color: #F5F5F5;
+}
+.DoubleGrey{
+  width: 100%;
+  height: 4rpx;
+  background-color: #F5F5F5;
+}
+.fatWhite{
+  width: 100%;
+  height: 4rpx;
+}
+.orderInfoView{
+  width: 100%;
+  height: 100%;
+}
+.InfoView{
+  display: flex;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  padding-left: 5%;
+}
+.Info{
+  font-family:'MI LANTING';
+  font-size: 27rpx; 
+}
+.textareaView{
+  width: 75%;
+  font-size: 27rpx; 
+  font-family:'MI LANTING';
+  padding-left: 15rpx;
+  padding-right: 20rpx;
+  height: 100%;
+}
+.rewardPic{
+  height: 60rpx;
+  width: 60rpx;
+}
+.reward_1{
+  margin-left: 3%;
+  width:20%;
+  font-size: 35rpx;
+}
+.reward_2{
+  width:70%;
+  font-size: 35rpx;
+  font-weight: bolder;
+  text-align: right;
+  margin-right: 8%;
+}
+.RewardView{
+  display: flex;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  padding-left: 5%;
+}
+.title_2{
+  font-size: 32rpx; 
+}
+.lastTipView{
+  width: 100%;
+  text-align: right;
+}
+.lastTip{
+  font-family:'MI LANTING';
+  font-size: 27rpx; 
+}

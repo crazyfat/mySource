@@ -1,0 +1,58 @@
+{
+  "pages":[
+    "pages/check/check",
+    "pages/mySenOrders/mySenOrders",
+    "pages/ContactUser/ContactUser",
+    "pages/ContactSender/ContactSender",
+    "pages/loginbyphone/loginbyphone",
+    "pages/login/login",
+    "pages/index/index",
+    "pages/order/order",
+    "pages/reorder/reorder",
+    "pages/ordercalog/ordercalog",
+    "pages/evaluate/evaluate",
+    "pages/myorder/myorder",
+    "pages/ordersInfo/ordersInfo",
+    "pages/senderInfo/senderInfo",
+    "pages/myReOrders/myReOrders"
+  ],
+  
+  "window":{
+    "backgroundColor": "#DC143C",
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#DC143C",
+    "navigationBarTitleText": "帮帮吧",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "selectedColor": "#DC143C",
+    "list": [
+      {
+        "pagePath": "pages/ordercalog/ordercalog",
+        "text": "我来帮",
+        "iconPath": "pages/images/order-black.png",
+        "selectedIconPath": "pages/images/order-red.png"
+      },
+      {
+        "pagePath": "pages/order/order",
+        "text": "求支援",
+        "iconPath": "pages/images/input-black.png",
+        "selectedIconPath": "pages/images/input-red.png"
+      },
+      {
+        "pagePath": "pages/myorder/myorder",
+        "text": "订单",
+        "iconPath": "pages/images/myorder-black.png",
+        "selectedIconPath": "pages/images/myorder-red.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "我的",
+        "iconPath": "pages/images/info-black.png",
+        "selectedIconPath": "pages/images/info-red.png"
+      }
+      ]
+  }
+  
+}

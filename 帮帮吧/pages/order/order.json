@@ -1,0 +1,9 @@
+{
+  "enablePullDownRefresh": false,
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "red",
+    "navigationBarTitleText": "订单详情",
+    "navigationBarTextStyle": "white"
+  }
+  }

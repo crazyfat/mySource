@@ -1,0 +1,76 @@
+<view class="container">
+  <view class="HeadVie">
+  <view class="PicVie" hidden="{{And}}" bindtap='TurnsenderInfo' >
+    <image class="HeadPic"  src='{{orders.receiver.avatar}}' ></image>
+  </view>
+  <!--二选一头像-->
+    <view class="PicVie">
+    <image class="HeadPic" hidden="{{Or}}"  src='{{SomeBody}}' ></image>
+  </view>
+  <view class="statusVie">
+    <text class="status">{{tip}}</text>
+  </view>
+  <view class="bindStatusVie">
+    <button type='primary' class="bindStatus" bindtap='bindStatus' >{{orderstatus}}</button>
+  </view>
+  </view>
+</view>
+<view class="HeigherGreyVie"></view>
+<!--订单详情-->
+<view class="InfoViewBlock_1">
+<view class="titleView">
+  <view class="titlePicView">
+    <image class="titlePic" src='../images/orderInfo_1.png' ></image>
+  </view>
+  <view class="titleTextView">
+    <text class="titleText">{{orders.title}}</text>
+  </view>
+</view>
+<view class="DoubleGrey"></view>
+<view class="fatWhite"></view>
+<view class="DoubleGrey"></view>
+<view class="orderInfoView">
+  <view class="InfoView">
+    <text class="Info" >发起人：{{orders.sender.name}}</text>
+  </view>
+  <view class="slenderGrey"></view>
+  <view class="InfoView">
+  <text class="Info" >生效时间：{{orders.begin_time}}</text>
+  </view>
+  <view class="slenderGrey"></view>
+  <view class="InfoView">
+  <text class="Info" >截止时间：{{orders.end_time}}</text>
+  </view>
+   <view class="InfoView">
+  <text class="Info" >类型：{{type}}</text>
+  </view>
+  <view class="slenderGrey"></view>
+  <view class="InfoView" >
+    <text class="Info" >详细要求：</text>
+    <textarea class="textareaView" disabled='true' >
+        {{orders.content}}
+    </textarea>
+  </view>
+  <view class="slenderGrey"></view>
+  <view class="RewardView" >
+  <image class="rewardPic" src='../images/rewardPic.png' ></image>
+    <text class="reward_1" >酬金：</text>
+    <text class="reward_2" >￥{{orders.price}}</text>
+  </view>
+<view class="HeigherGreyVie"></view>
+<view class="InfoView">
+    <text class="title_2" >下单信息</text>
+  </view>
+  <view class="slenderGrey"></view>
+  <view class="InfoView">
+    <text class="Info" >订单号：{{orders.uuid}}</text>
+  </view>
+  <view class="slenderGrey"></view>
+  <view class="InfoView">
+    <text class="Info" >下单时间：{{orders.updated_at}}</text>
+  </view>
+</view>
+</view>
+<view hidden='{{hideTip}}' class="lastTipView">
+  <text class="lastTip" >点击头像联系用户</text>
+</view>

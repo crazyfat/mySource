@@ -1,0 +1,32 @@
+<!--pages/login/login.wxml-->
+
+<view class="container"> 
+ <view class="login-icon"> 
+ <image class="login-img" src="../images/logo.png"></image> 
+ </view> 
+ <view class="login-from"> 
+ 
+ <view class="putview">
+ <!--账号--> 
+<view class="inputview">
+<image class="Icin" src="../images/user.png"></image>
+  <input class="inputText" type='number' bindinput="phoneInput" name="phonenumber" placeholder='手机号' />
+</view>
+</view>
+<view class="block"></view>
+<view class="putview">
+ <!--验证码--> 
+<view class="inputview">
+<image class="Icin" src="../images/Code.png"></image>
+  <input class="inputCode"  bindinput="codeInput" maxlength="6" name="code" placeholder='验证码'/> <text class="getcode" bindtap="bindButtonTap" disabled='{{disabled}}' style="color:{{color}}" >{{text}}</text>
+</view>
+</view>
+ <!--按钮--> 
+ <view class="block"></view>
+ <view class="loginBtnView"> 
+  <button class="loginBtn" type="warn" size="{{primarySize}}" loading="{{loading}}" plain="{{plain}}"  bindtap="login">登录</button> 
+ </view> 
+
+ 
+ </view> 
+</view> 

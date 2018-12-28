@@ -1,0 +1,131 @@
+@import '../../style/xiaomi.wxss';
+page{
+  background-color: #F5F5F5;
+}
+.head{
+  height: 250rpx;
+  background-color:  	 	#DC143C;
+  box-sizing: border-box; 
+}
+.headpic{
+  border-radius: 100rpx;
+  width: 130rpx;
+  height: 130rpx;
+  margin-left: 40rpx;
+  margin-top: 60rpx;
+}
+.headview{
+  height:100%;
+  display: flex;
+}
+.name{
+  font-weight: bolder;
+  font-family: 'MI LANTING';
+  color: white;
+}
+.nameview{
+  padding-top:80rpx;
+  padding-left: 60rpx;
+  width: 400rpx;
+}
+.smallPhone{
+  width: 30rpx;
+  height: 30rpx;
+  margin-top: 17rpx;
+}
+.phoneNumber{
+  color:white;
+  font-size: 26rpx;
+  
+}
+.Numberview{
+  padding-left: 8rpx;
+}
+.Phoneview{
+  width:100%;
+  display:flex;
+}
+.Bodytitle{
+  background-color: white;
+  width: 100%;
+  margin-top: 40rpx;
+  display: flex;
+  padding: 6rpx;
+}
+.body{
+  margin-top: 40rpx;
+  width: 100%;
+  height: 100%;
+  background-color:  white
+}
+.infoPic{
+  width: 54rpx;
+  height: 54rpx;
+  margin-left: 30rpx
+}
+.information{
+  margin-left: 18rpx;
+  font-family: 'MI LANTING';
+  font-size:bloder;
+}
+.greenline{
+  background-color:  	#F5F5F5;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  height: 6rpx;
+}
+.info{
+  margin-left: 30rpx;
+  display: flex;
+  padding: 12rpx;
+}
+.detailPic{
+  width: 40rpx;
+  height: 40rpx;
+}
+.infom{
+  color: #5C5C5C;
+font-family: 'MI LANTING';
+font-size: 30rpx;
+margin-left: 20rpx;
+}
+.block-B{
+  width:40%;
+}
+.getsInform{
+color: #5C5C5C;
+font-family: 'MI LANTING';
+font-size: 30rpx;
+margin-left: 20rpx;
+width: 38%;
+text-align:center;
+
+}
+.correct{
+  width: 100%;
+  background-color: white;
+  margin-top: 100rpx;
+  padding-top: 16rpx;
+  padding-bottom: 16rpx;
+  color: #DC143C;
+  font-size: 36rpx;
+  text-align:center;
+}
+.ButVie{
+  margin-top: 50rpx;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  padding: 10rpx;
+}
+.contractText{
+  font-family: 'MI LANTING';
+  color: #DC143C;
+}
+.smallCall{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+
+
